@@ -2,7 +2,7 @@
 #include "Ball.h"
 #include <iostream>
 
-r2d290::r2d290(std::string name, std::vector<People*> * container)
+r2d290::r2d290( std::string name, std::vector<People*> * container )
 : People(name)
 {
     peopleContainer = container;
@@ -22,7 +22,7 @@ void r2d290::addBall( Ball *ball )
 
 void r2d290::throwBall()
 {
-    if(ballContainer.size()>0)
+    if( ballContainer.size()>0 )
     {
         std::cout << name << " kaster " << ballContainer[0]->getColor() << std::endl << std::endl;
         peopleContainer->at(1)->addBall( ballContainer[0] );
@@ -37,7 +37,7 @@ void r2d290::throwBall()
 void r2d290::printBalls()
 {
     std::cout << name << " holder " << ballContainer.size() << " baller: " << std::endl;
-    for(int i = 0; i < ballContainer.size(); i++)
+    for( int i = 0; i < ballContainer.size(); i++ )
     {
         Ball* ball = ballContainer[i];
         std::cout << ball->getColor() << " ";
